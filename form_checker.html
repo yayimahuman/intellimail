@@ -9,29 +9,54 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+
 <div class="form-group">
-    <input id="checkbox" type="checkbox">
+    <input id="toneSlider" type="range" min="0" max="2" onchange="change()">
   </div>
 
-  <div id="delivery" >
+  <div id="tone0">
     <div class="form-group">
       HIDDEN
+      
+    </div>
+  </div
+  <div id="tone1">
+    <div class="form-group">
+      HIDDEN1
+      
+    </div>
+  </div>
+  <div id="tone2">
+    <div class="form-group">
+      HIDDEN2
+      
     </div>
   </div>
 
 
 <script>
-var checkbox = document.getElementById('checkbox');
-var delivery_div = document.getElementById('delivery');
-var showHiddenDiv = function(){
-   if(checkbox.checked) {
-     delivery_div.style['display'] = 'block';
-   } else {
-     delivery_div.style['display'] = 'none';
-   } 
+var slider = document.getElementById('toneSlider');
+var form0 = document.getElementById('tone0');
+var form1 = document.getElementById('tone1');
+var form2 = document.getElementById('tone2');
+//var check = 
+change function(){
+   if(slider==0) {
+     form0.style['display'] = 'block';
+     form1.style['display'] = 'none';
+     form2.style['display'] = 'none';
+   } else if (slider==1) {
+     form0.style['display'] = 'none';
+     form1.style['display'] = 'block';
+     form2.style['display'] = 'none';
+   } else if (slider==2){
+     form0.style['display'] = 'none';
+     form1.style['display'] = 'none';
+     form2.style['display'] = 'block';
+   }
 }
-checkbox.onclick = showHiddenDiv;
-showHiddenDiv();
+//http://stackoverflow.com/questions/18544890/onchange-event-on-input-type-range-is-not-triggering-in-firefox-while-dragging?scrlybrkr
 </script>
 </body>
 </html>
