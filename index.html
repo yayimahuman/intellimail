@@ -1,3 +1,6 @@
+<!-- saved forms: https://gist.github.com/zaus/4717416 -->
+
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -27,35 +30,36 @@
     color: #003366;
 }
 .bg {
-  background: url('http://www.aamrofreight.net/wp-content/uploads/2014/06/blue-abstract-background.jpg') no-repeat center center;
-  position: absolute;
-  width: 100%;
-  height: 300px;
-  top:0;
-  left:0;
-  z-index: -1;
+	  background: url('http://www.aamrofreight.net/wp-content/uploads/2014/06/blue-abstract-background.jpg') no-repeat center center;
+	  position: absolute;
+	  width: 100%;
+	  height: 300px;
+	  top:0;
+	  left:0;
+	  z-index: -1;
 }
 .jumbotron{
     background:transparent;
     height:250px;
 }
 body{
-    background:#F8F8F8;
+    background:#F0F0F0;
 }
-button{
-    font-size: 1.5em;
-    font-weight: 200;
+button,input[type=submit]{
+    font-size: 1.25em;
+    font-weight: 300;
     padding: 0.3em 1em;
     margin: 0.5em 0.5em;
     text-align: center;
     border-radius: 0.3em;
     border: 0.1em solid #003366;
+    background:#F0F0F0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-button:hover,button:active {
+button:hover,button:active,input[type=submit]:hover {
     background: #003366;
     color: white;
 }
@@ -65,6 +69,14 @@ position: relative;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+input[type=text] {
+ 	border:1px solid #D0D0D0;
+	margin: 0;
+ 	-webkit-appearance: none;
+}
+input[type=text]:focus {
+  outline: none;
 }
 /*for navigation bar*/
 .navbar-default .navbar-nav > li > a {
@@ -89,13 +101,16 @@ position: relative;
 .navbar .navbar-collapse {
     text-align: center;
 }
+p{
+	font-size: 120%;
+}
 </style>
 </head>
 
 
 
 
-<body>
+<body onload="checkFormal()">
 <!--navbar-->
 <nav class="navbar navbar-default navbar-static-top" style="margin:0px;border:none">
   <div class="container-fluid">
@@ -122,21 +137,110 @@ position: relative;
 
 <div class="bg"></div>
 <div class="jumbotron">
-  <center><h1>IntelliMail</h1>
+  <center><h1>IntelliMail - Under Development</h1>
   <p>Write an email in seconds</p><center>
 </div>
 
 
 <div class="container">
-  <h3>Most Popular Templates:</h3>
-  <p>
+  <h3>Popular Templates:</h3>
+</div>
+
+
+<div class="container">
+<h4>Missing Class</h4>
+<p>How formal do you want your email to be?
+<input type="range" id="myRange" min="0" max="2" value="1" onchange="checkFormal()">
+<script>
+function checkFormal() {
+    var x = document.getElementById("myRange").value;
+    if (x==0){
+    	document.getElementById("para").innerHTML = "Friendly";
+        document.getElementById("tone1").style.display = "none";
+        document.getElementById("tone2").style.display = "none";
+        $("#tone0").fadeIn();
+    }
+    else if (x==1){
+    	document.getElementById("para").innerHTML = "Semi-Formal";
+		document.getElementById("tone0").style.display = "none";
+        document.getElementById("tone2").style.display = "none";
+        $("#tone1").fadeIn();
+    }
+    else if (x==2){
+    	document.getElementById("para").innerHTML = "Formal";
+		document.getElementById("tone0").style.display = "none";
+        document.getElementById("tone1").style.display = "none";
+        $("#tone2").fadeIn();
+    }
+}
+</script>
+<h5 id="para"></h5>
+<br>
+<br>
+<form role="form" action="written_email.php" method="get">
+
+  	<div id="tone0" style="display:none">
+    	<p>Hi  
+		<input type="text" class "form-control" id="recipient" placeholder="Mr. Bitidez">
+		,
+		<br>
+		<br>
+		<p>I hope you're having a good weekend! I just wanted to let you know that I will be away on 
+		<input type="text" class "form-control" id="day" placeholder="Tuesday" style="width:90px"> 
+		since I 
+		<input type="text" class "form-control" id="reason" placeholder="have a volleyball game">
+		. I will 
+		<input type="text" class "form-control" id="actions" placeholder="check Google Classroom and" style="width:225px"> 
+		ask a friend for the homework and catch up on any work I miss. If you would like me to drop by sometime to pick up any handouts I'll need, please let me know.
+		<br>
+		<br>
+		Thanks,
+		<br>
+		<input type="text" class "form-control" id="signature" placeholder="Harry">
+  	</div>
+
+	<div id="tone1" style="display:none">
+     	<p>Dear <input type="text" class "form-control" id="recipient" placeholder="Ms. Williams">,
+		<br>
+		<br>
+		<p>I hope your weekend is going well! I just wanted to let you know that I will not be in class on 
+		<input type="text" class "form-control" id="day" placeholder="Tuesday" style="width:90px"> 
+		since I 
+		<input type="text" class "form-control" id="reason" placeholder="will be at a debating tournament" style="width:240px">
+		. I will 
+		<input type="text" class "form-control" id="actions" placeholder="check Google Classroom and" style="width:225px"> 
+		ask a friend for the homework and catch up on any work I miss. If you would like me to drop by sometime to pick up any handouts, please let me know.
+		<br>
+		<br>
+		Thanks,
+		<br>
+		<input type="text" class "form-control" id="signature" placeholder="Harry">
+	</div>
+
+	<div id="tone2" style="display:none">
+      	<p>Dear <input type="text" class "form-control" id="recipient" placeholder="Mr. Allan Poe">,
+		<br>
+		<br>
+		<p>I hope you are enjoying your weekend! I just wanted to inform you that, unfortunately, I will be unable to attend class on <input type="text" class "form-control" id="day" placeholder="Tuesday" style="width:90px">
+		<select><option value="due">due to</option><option value="because">because of</option></select>
+		<input type="text" class "form-control" id="reason" placeholder="an urgent family issue" style="width:180px">. I will <input type="text" class "form-control" id="actions" placeholder="check Google Classroom and" style="width:225px"> ask a classmate for the homework and complete any work I miss. If you would like me to pick up any handouts, please let me know.
+		<br>
+		<br>
+		Thanks,
+		<br>
+		<input type="text" class "form-control" id="signature" placeholder="Harry">
+	</div>
+
+<br>
+<br>
+<input type="submit" value="Finish">
+</form>
 </div>
 
 
 
 <!-- check how to make table size stay constant, boxes stay square
 <img src="image.jpg" alt="Header Image" style="width:100%;border:0">
-
 -->
 
 
