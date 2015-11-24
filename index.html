@@ -70,6 +70,91 @@ position: relative;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+input[type=range] {
+  -webkit-appearance: none;
+  max-width: 300px;
+  margin: 5.5px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 24px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #d0d0d0;
+  border-radius: 2px;
+  border: 0px solid #004282;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 1px solid #000000;
+  height: 35px;
+  width: 30px;
+  border-radius: 8px;
+  background: #004282;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5.5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #d0d0d0;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 24px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #d0d0d0;
+  border-radius: 2px;
+  border: 0px solid #004282;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 1px solid #000000;
+  height: 35px;
+  width: 30px;
+  border-radius: 8px;
+  background: #004282;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 24px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #d0d0d0;
+  border: 0px solid #004282;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #d0d0d0;
+  border: 0px solid #004282;
+  border-radius: 4px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 1px solid #000000;
+  height: 35px;
+  width: 30px;
+  border-radius: 8px;
+  background: #004282;
+  cursor: pointer;
+  height: 24px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #d0d0d0;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #d0d0d0;
+}
 input[type=text] {
  	border:1px solid #D0D0D0;
 	margin: 0;
@@ -177,9 +262,11 @@ function checkFormal() {
 <h5 id="para"></h5>
 <br>
 <br>
+
 <form role="form" action="written_email.php" method="get">
 
   	<div id="tone0" style="display:none">
+  		<input type="hidden" id="tone" value="0">
     	<p>Hi  
 		<input type="text" class "form-control" id="recipient" placeholder="Mr. Bitidez">
 		,
@@ -200,7 +287,10 @@ function checkFormal() {
   	</div>
 
 	<div id="tone1" style="display:none">
-     	<p>Dear <input type="text" class "form-control" id="recipient" placeholder="Ms. Williams">,
+		<input type="hidden" id="tone" value="1">
+     	<p>Dear 
+     	<input type="text" class "form-control" id="recipient" placeholder="Ms. Williams">
+     	,
 		<br>
 		<br>
 		<p>I hope your weekend is going well! I just wanted to let you know that I will not be in class on 
@@ -218,12 +308,18 @@ function checkFormal() {
 	</div>
 
 	<div id="tone2" style="display:none">
-      	<p>Dear <input type="text" class "form-control" id="recipient" placeholder="Mr. Allan Poe">,
+		<input type="hidden" id="tone" value="2">
+      	<p>Dear 
+      	<input type="text" class "form-control" id="recipient" placeholder="Mr. Allan Poe">
+      	,
 		<br>
 		<br>
-		<p>I hope you are enjoying your weekend! I just wanted to inform you that, unfortunately, I will be unable to attend class on <input type="text" class "form-control" id="day" placeholder="Tuesday" style="width:90px">
+		<p>I hope you are enjoying your weekend! I just wanted to inform you that, unfortunately, I will be unable to attend class on 
+		<input type="text" class "form-control" id="day" placeholder="Tuesday" style="width:90px">
 		<select><option value="due">due to</option><option value="because">because of</option></select>
-		<input type="text" class "form-control" id="reason" placeholder="an urgent family issue" style="width:180px">. I will <input type="text" class "form-control" id="actions" placeholder="check Google Classroom and" style="width:225px"> ask a classmate for the homework and complete any work I miss. If you would like me to pick up any handouts, please let me know.
+		<input type="text" class "form-control" id="reason" placeholder="an urgent family issue" style="width:180px">
+		. I will 
+		<input type="text" class "form-control" id="actions" placeholder="check Google Classroom and" style="width:225px"> ask a classmate for the homework and complete any work I miss. If you would like me to pick up any handouts, please let me know.
 		<br>
 		<br>
 		Thanks,
