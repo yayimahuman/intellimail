@@ -13,12 +13,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-<script>
-	function getEmail() {
-    var x = <?php echo $_GET["tone"]; ?>;
-    document.getElementById("tone"+x).style.display = "block";
-}
-</script>
+
 
 <style>
 * {
@@ -135,65 +130,71 @@ p{
 <div class="container">
 	<div id="tone0" style="display:none">
     	<p>Hi  
-		<?php echo $_GET["recipient"]; ?>
-		,
+		<?php echo $_GET["recipient"];?>,
 		<br>
 		<br>
 		<p>I hope you're having a good weekend! I just wanted to let you know that I will be away on 
-		<?php echo $_GET["day"]; ?> 
+		<?php echo $_GET["day"]; ?>
 		since I 
-		<?php echo $_GET["reason"]; ?>
-		. I will 
-		<?php echo $_GET["actions"]; ?>  
+		<?php echo $_GET["reason"];?>. 
+		I will 
+		<?php echo $_GET["actions"]; ?>
 		ask a friend for the homework and catch up on any work I miss. If you would like me to drop by sometime to pick up any handouts I'll need, please let me know.
 		<br>
 		<br>
 		Thanks,
 		<br>
-		<?php echo $_GET["signature"]; ?>
+		<?php echo $_GET["signature"];?>
   	</div>
 
 	<div id="tone1" style="display:none">
      	<p>Dear 
-     	<?php echo $_GET["recipient"]; ?>
-     	,
+     	<?php echo $_GET["recipient"];?>,
 		<br>
 		<br>
 		<p>I hope your weekend is going well! I just wanted to let you know that I will not be in class on 
-		<?php echo $_GET["day"]; ?> 
+		<?php echo $_GET["day"]; ?>
 		since I 
-		<?php echo $_GET["reason"]; ?>
-		. I will 
+		<?php echo $_GET["reason"];?>. 
+		I will
 		<?php echo $_GET["actions"]; ?> 
 		ask a friend for the homework and catch up on any work I miss. If you would like me to drop by sometime to pick up any handouts, please let me know.
 		<br>
 		<br>
 		Thanks,
 		<br>
-		<?php echo $_GET["signature"]; ?>
+		<?php echo $_GET["signature"];?>
 	</div>
 
 	<div id="tone2" style="display:none">
       	<p>Dear 
-      	<?php echo $_GET["recipient"]; ?>
-      	,
+      	<?php echo $_GET["recipient"];?>,
 		<br>
 		<br>
 		<p>I hope you are enjoying your weekend! I just wanted to inform you that, unfortunately, I will be unable to attend class on 
 		<?php echo $_GET["day"]; ?> 
-		<select><option value="due">due to</option><option value="because">because of</option></select>
-		<?php echo $_GET["reason"]; ?>
-		. I will 
+		because of
+		<?php echo $_GET["reason"];?>. 
+		I will 
 		<?php echo $_GET["actions"]; ?> 
 		ask a classmate for the homework and complete any work I miss. If you would like me to pick up any handouts, please let me know.
 		<br>
 		<br>
 		Thanks,
 		<br>
-		<?php echo $_GET["signature"]; ?>
+		<?php echo $_GET["signature"];?>
 	</div>
-
+<p style="font-size:75%">Sent with the help of IntelliMail.xyz</p>
 </div>
+
+<script>
+	function getEmail() {
+    var x = <?php echo $_GET["tone"]; ?>;
+    if (x==0){document.getElementById("tone0").style.display = "block";}
+    else if (x==1){document.getElementById("tone1").style.display = "block";}
+    else if (x==2){document.getElementById("tone2").style.display = "block";}
+}
+</script>
 
 
 
