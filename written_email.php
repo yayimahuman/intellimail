@@ -13,7 +13,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-<script src="./javascript/mailScript.js"></script>
+<script src="./javascript/mailScript.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="./css/mailStyle.css">
 
 <style>
@@ -23,7 +23,7 @@
 
 </head>
 
-<body onload="getEmail(<?php echo $_GET["tone"]; ?>);checkDay()">
+<body onload="getEmail(<?php echo $_GET["tone"]; ?>);checkDay();">
 
 <?php include_once "navbar.html";?>
 
