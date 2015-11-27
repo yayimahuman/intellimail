@@ -13,119 +13,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-
+<script src="./javascript/mailScript.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/mailStyle.css">
 
 <style>
-* {
-    font-size: 100%;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 300;
-    color: #003366;
-}
-.bg {
-	  background: url('http://www.aamrofreight.net/wp-content/uploads/2014/06/blue-abstract-background.jpg') no-repeat center center;
-	  position: absolute;
-	  width: 100%;
-	  height: 300px;
-	  top:0;
-	  left:0;
-	  z-index: -1;
-}
-.jumbotron{
-    background:transparent;
-    height:250px;
-}
-body{
-    background:#F0F0F0;
-}
-button,input[type=submit]{
-    font-size: 1.25em;
-    font-weight: 300;
-    padding: 0.3em 1em;
-    margin: 0.5em 0.5em;
-    text-align: center;
-    border-radius: 0.3em;
-    border: 0.1em solid #003366;
-    background:#F0F0F0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-button:hover,button:active,input[type=submit]:hover {
-    background: #003366;
-    color: white;
-}
-center {
-position: relative;
-  top: 40%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-input[type=text] {
- 	border:1px solid #D0D0D0;
-	margin: 0;
- 	-webkit-appearance: none;
-}
-input[type=text]:focus {
-  outline: none;
-}
-/*for navigation bar*/
-.navbar-default .navbar-nav > li > a {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    font-size: 1.125em;
-    color:#003366;
-}
-.navbar-default .navbar-nav > li.active > a:link,.navbar-default .navbar-nav > li.active > a:hover{
-    background:#002549;
-    color:#F8F8F8;
-}
-.navbar-default .navbar-nav > li > a:hover{
-    background:#004282;
-    color:#F8F8F8;
-}
-.navbar .navbar-nav {
-    vertical-align: top;
-}
-.navbar .navbar-collapse {
-    text-align: center;
-}
-p{
-	font-size: 120%;
-}
+.bg{background: url('http://www.aamrofreight.net/wp-content/uploads/2014/06/blue-abstract-background.jpg') no-repeat center center;}
 </style>
+
 
 </head>
 
-<body onload="getEmail()">
+<body onload="getEmail(<?php echo $_GET["tone"]; ?>);checkDay()">
 
-<nav class="navbar navbar-default navbar-static-top" style="margin:0px;border:none">
-  <div class="container-fluid">
-    <div class="navbar-header" style="max-width:1000px">
-    <a style="margin-left:10px" class="navbar-brand" href="http://intellimail.xyz/"><img height="30px" src="http://demoware.eu/en/intranet/administrative/images/support-images/mail-icon"></a>
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="http://intellimail.xyz/templates">Our Templates</a></li>
-        <li><a href="http://intellimail.xyz/suggest">Suggest a Template</a></li>
-        <li><a href="http://intellimail.xyz/about">About Us</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-      </ul>
-    </div>
-  </div>
-</nav>
+<?php include_once "navbar.html";?>
 
 <div class="container">
 	<div id="tone0" style="display:none">
@@ -187,14 +87,6 @@ p{
 <p style="font-size:75%">Sent with the help of IntelliMail.xyz</p>
 </div>
 
-<script>
-	function getEmail() {
-    var x = <?php echo $_GET["tone"]; ?>;
-    if (x==0){document.getElementById("tone0").style.display = "block";}
-    else if (x==1){document.getElementById("tone1").style.display = "block";}
-    else if (x==2){document.getElementById("tone2").style.display = "block";}
-}
-</script>
 
 
 
