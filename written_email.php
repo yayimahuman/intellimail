@@ -27,7 +27,7 @@
 
 <div class="container">
 	<div id="tone0" style="display:none">
-    	<p>Hi  
+		<p>Hi  
 		<?php echo $_GET["recipient"];?>,
 		<br>
 		<br>
@@ -40,11 +40,11 @@
 		Thanks,
 		<br>
 		<?php echo $_GET["signature"];?>
-  	</div>
+	</div>
 
 	<div id="tone1" style="display:none">
-     	<p>Dear 
-     	<?php echo $_GET["recipient"];?>,
+		<p>Dear 
+		<?php echo $_GET["recipient"];?>,
 		<br>
 		<br>
 		<p>I hope you are having a nice <span id="day2"></span>! I just wanted to let you know that I will not be in class on 
@@ -59,8 +59,8 @@
 	</div>
 
 	<div id="tone2" style="display:none">
-      	<p>Dear 
-      	<?php echo $_GET["recipient"];?>,
+		<p>Dear 
+		<?php echo $_GET["recipient"];?>,
 		<br>
 		<br>
 		<p>I hope your <span id="day3"></span> is going well! I just wanted to inform you that, unfortunately, I will be unable to attend class on 
