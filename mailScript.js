@@ -1,12 +1,16 @@
 function checkDay(){
-	var date = new Date();
-	var d = date.getDay();
-	if (d == 0|| d == 5||d == 6){
-		document.getElementById('greetDay').innerHTML = "weekend";
-	}
-	else {
-		document.getElementById('greetDay').innerHTML = "day";
-	}
+    var date = new Date();
+    var d = date.getDay();
+    if (d == 0|| d == 5||d == 6){
+        document.getElementById("day1").innerHTML = "weekend";
+        document.getElementById("day2").innerHTML = "weekend";
+        document.getElementById("day3").innerHTML = "weekend";
+    }
+    else {
+        document.getElementById("day1").innerHTML =  "day";
+        document.getElementById("day2").innerHTML =  "day";
+        document.getElementById("day3").innerHTML =  "day";
+    }
 }
 function checkFormal() {
     var x = document.getElementById("myRange").value;
@@ -30,7 +34,13 @@ function checkFormal() {
     }
 }
 function getEmail(x) {
-    if (x==0){document.getElementById("tone0").style.display = "block";}
-    else if (x==1){document.getElementById("tone1").style.display = "block";}
-    else if (x==2){document.getElementById("tone2").style.display = "block";}
+    if (x==0){
+        document.getElementById("tone0").style.display = "block";
+    }
+    else if (x==1){
+        document.getElementById("tone1").style.display = "block";
+    }
+    else if (x==2){
+        document.getElementById("tone2").style.display = "block";
+    }
 }
