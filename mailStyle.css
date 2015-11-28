@@ -141,29 +141,29 @@ input[type=text]:focus {
 }
 /*for navigation bar*/
 .navbar-default {
-    background-color: #003366;
+  background-color: #003366;
 }
 .navbar-default .navbar-nav > li > a {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    font-size: 1.125em;
-    color:#FFFFFF;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 1.125em;
+  color:#FFFFFF;
 }
 .navbar-default .navbar-nav > li.active > a:link,.navbar-default .navbar-nav > li.active > a:hover{
     background:#FFFFFF;
     color:#003366;
 }
 .navbar-default .navbar-nav > li > a:hover{
-    background:#FFFFFF;
-    color:#003366;
+  background:#FFFFFF;
+  color:#003366;
 }
 .navbar .navbar-nav {
-    vertical-align: top;
+  vertical-align: top;
 }
 .navbar .navbar-collapse {
-    text-align: center;
+  text-align: center;
 }
 p{
   font-size:1.25em;
