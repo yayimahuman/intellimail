@@ -50,9 +50,9 @@
 	<br>
 
 	<div id="tone0" style="display:none">
-  		<form role="form" action="written_email.php" method="get">
-  		<input type="hidden" name="tone" value="0">
-    	<p>Hi  
+		<form role="form" action="written_email.php" method="get">
+		<input type="hidden" name="tone" value="0">
+		<p>Hi 
 		<input type="text" name="recipient" placeholder="Mr. Bitidez">,
 		<br>
 		<br>
@@ -69,13 +69,13 @@
 		<br>
 		<input type="submit" value="Finish">
 		</form>
-  	</div>
+	</div>
 
 	<div id="tone1" style="display:none">
 		<form role="form" action="written_email.php" method="get">
 		<input type="hidden" name="tone" value="1">
-     	<p>Dear 
-     	<input type="text" name="recipient" placeholder="Ms. Williams">,
+		<p>Dear 
+		<input type="text" name="recipient" placeholder="Ms. Williams">,
 		<br>
 		<br>
 		<p>I hope you are having a nice <span id="day2"></span>! I just wanted to let you know that I will not be in class on 
@@ -96,8 +96,8 @@
 	<div id="tone2" style="display:none">
 		<form role="form" action="written_email.php" method="get">
 		<input type="hidden" name="tone" value="2">
-      	<p>Dear 
-      	<input type="text" name="recipient" placeholder="Mr. Allan Poe">,
+		<p>Dear 
+		<input type="text" name="recipient" placeholder="Mr. Allan Poe">,
 		<br>
 		<br>
 		<p>I hope your <span id="day3"></span> is going well! I just wanted to inform you that, unfortunately, I will be unable to attend class on 
