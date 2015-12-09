@@ -2,14 +2,10 @@ function checkDay(){
     var date = new Date();
     var d = date.getDay();
     if (d == 0|| d == 5||d == 6){
-        document.getElementById("day1").innerHTML = "weekend";
-        document.getElementById("day2").innerHTML = "weekend";
-        document.getElementById("day3").innerHTML = "weekend";
+        document.getElementById("day").innerHTML = "weekend";
     }
     else {
         document.getElementById("day1").innerHTML =  "day";
-        document.getElementById("day2").innerHTML =  "day";
-        document.getElementById("day3").innerHTML =  "day";
     }
 }
 function checkFormal() {
