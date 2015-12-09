@@ -5,7 +5,7 @@ function checkDay(){
         document.getElementById("day").innerHTML = "weekend";
     }
     else {
-        document.getElementById("day1").innerHTML =  "day";
+        document.getElementById("day").innerHTML =  "day";
     }
 }
 function checkFormal() {
