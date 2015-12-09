@@ -33,7 +33,7 @@ function checkFormal() {
         $("#tone2").fadeIn();
     }
 }
-function getEmail(x) {
+/*function getEmail(x) {
     if (x==0){
         document.getElementById("tone0").style.display = "block";
     }
@@ -43,4 +43,4 @@ function getEmail(x) {
     else if (x==2){
         document.getElementById("tone2").style.display = "block";
     }
-}
+}*/
