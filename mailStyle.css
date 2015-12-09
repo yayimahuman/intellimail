@@ -39,14 +39,14 @@ button:hover,button:active,input[type=submit]:hover {
   color: white;
 }
 center {
-  position: relative;
+  position: absolute;
   top: 40%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 glyphicon glyphicon-envelope {
-  color:white;
+  background:white;
 }
 input[type=range] {
   -webkit-appearance: none;
@@ -141,7 +141,7 @@ input[type=text]:focus {
   outline: none;
 }
 /*for navigation bar*/
-.navbar-default {
+.navbar-default{
   background-color: #003366;
   margin:0px;
   border:none;
@@ -156,11 +156,9 @@ input[type=text]:focus {
 }
 .navbar-default .navbar-nav > li.active > a:link,.navbar-default .navbar-nav > li.active > a:hover{
   color:#b3d9ff;
-  font-weight:400;
 }
 .navbar-default .navbar-nav > li > a:hover{
   color:#b3d9ff;
-  font-weight:400;
 }
 .navbar .navbar-nav {
   vertical-align: top;
