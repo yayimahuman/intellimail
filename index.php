@@ -15,12 +15,6 @@
 
 	<script src="./javascript/mailScript.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="./css/mailStyle.css">
-
-	<style>
-	.bg{
-		background: url('http://www.aamrofreight.net/wp-content/uploads/2014/06/blue-abstract-background.jpg') no-repeat center center;
-	}
-	</style>
 </head>
 
 
@@ -29,8 +23,10 @@
 <?php include_once "navbar.html";?>
 
 <div class="jumbotron">
-	<h1>IntelliMail - Under Development</h1>
-	<p>Write an email in seconds</p>
+	<div class="container">
+		<h1>IntelliMail - Under Development</h1>
+		<p>The smarter way to write an email</p>
+	</div>
 </div>
 
 <div class="container">
