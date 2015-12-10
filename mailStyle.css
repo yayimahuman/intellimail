@@ -14,6 +14,9 @@
 body{
   background:#F0F0F0;
 }
+button.navbar-toggle, span.icon-bar {
+  color:white;
+}
 button,input[type=submit]{
   font-size: 1.25em;
   font-weight: 300;
