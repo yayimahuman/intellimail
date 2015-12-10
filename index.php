@@ -28,17 +28,14 @@
 
 <?php include_once "navbar.html";?>
 
-<div class="bg"></div>
 <div class="jumbotron">
-	<center><h1>IntelliMail - Under Development</h1>
-	<p>Write an email in seconds</p></center>
+	<h1>IntelliMail - Under Development</h1>
+	<p>Write an email in seconds</p>
 </div>
-
 
 <div class="container">
 	<h3>Popular Templates:</h3>
 </div>
-
 
 <div class="container">
 <h4>Missing Class</h4>
