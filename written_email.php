@@ -13,10 +13,14 @@
 
 	<script src="./javascript/mailScript.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="./css/mailStyle.css">
-
+	<script>
+		$( document ).ready(function() {
+			checkDay();
+		});
+	</script>
 </head>
 
-<body onload="checkDay();">
+<body>
 
 <?php include_once "navbar.html";?>
 
