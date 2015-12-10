@@ -15,10 +15,16 @@
 
 	<script src="./javascript/mailScript.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="./css/mailStyle.css">
+	<script>
+		$( document ).ready(function() {
+			checkFormal();
+			checkDay();
+		});
+	</script>
 </head>
 
 
-<body onload="checkFormal();checkDay();">
+<body>
 
 <?php include_once "navbar.html";?>
 
