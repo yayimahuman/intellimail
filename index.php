@@ -49,7 +49,7 @@
 		<input type="text" name="recipient" placeholder="Mr. Bitidez">,
 		<br>
 		<br>
-		<p>I hope you're having a good <span id="day1"></span>! I just wanted to let you know that I will be away on 
+		<p>I hope you're having a good <span class="day"></span>! I just wanted to let you know that I will be away on 
 		<input type="text" name="day" placeholder="Tuesday" style="width:90px"> since I 
 		<input type="text" name="reason" placeholder="have a volleyball game">. I will 
 		<input type="text" name="actions" placeholder="check Google Classroom and" style="width:225px"> ask a friend for the homework and catch up on any work I miss. If you would like me to drop by sometime to pick up any handouts I'll need, please let me know.
@@ -71,7 +71,7 @@
 		<input type="text" name="recipient" placeholder="Ms. Williams">,
 		<br>
 		<br>
-		<p>I hope you are having a nice <span id="day2"></span>! I just wanted to let you know that I will not be in class on 
+		<p>I hope you are having a nice <span class="day"></span>! I just wanted to let you know that I will not be in class on 
 		<input type="text" name="day" placeholder="Tuesday" style="width:90px"> since I 
 		<input type="text" name="reason" placeholder="will be at a debating tournament" style="width:240px">. I will 
 		<input type="text"  name="actions" placeholder="check Google Classroom and" style="width:225px"> ask a friend for the homework and catch up on any work I miss. If you would like me to drop by sometime to pick up any handouts, please let me know.
@@ -93,7 +93,7 @@
 		<input type="text" name="recipient" placeholder="Mr. Allan Poe">,
 		<br>
 		<br>
-		<p>I hope your <span id="day3"></span> is going well! I just wanted to inform you that, unfortunately, I will be unable to attend class on 
+		<p>I hope your <span class="day"></span> is going well! I just wanted to inform you that, unfortunately, I will be unable to attend class on 
 		<input type="text" name="day" placeholder="Tuesday" style="width:90px"> because of 
 		<input type="text" name="reason" placeholder="an urgent family issue" style="width:180px">. I will 
 		<input type="text" name="actions" placeholder="check Google Classroom and" style="width:225px"> ask a classmate for the homework and complete any work I miss. If you would like me to pick up any handouts, please let me know.
