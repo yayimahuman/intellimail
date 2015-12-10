@@ -6,17 +6,10 @@
   font-weight:300;
   color: black;
 }
-.bg {
-  position:absolute;
-  width: 100%;
-  height: 300px;
-  top:0;
-  left:0;
-  z-index: -1;
-}
-.jumbotron{
-  background:transparent;
-  height:250px;
+.jumbotron {
+  background-image: url(http://s3.amazonaws.com/churchplantmedia-cms/lakeside_assembly/blue-abstract-triangle-polygonal-background.jpg);
+  background-size: cover;
+  position: relative;
 }
 body{
   background:#F0F0F0;
