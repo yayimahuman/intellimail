@@ -18,7 +18,10 @@
 
 <?php include_once "navbar.html";?>
 
-<div class="container>
+<div class="container">
+	<h1>About</h1>
+	<p>Under development</p>
+</div>
 
 </body>
 </html>
