@@ -20,7 +20,7 @@
 
 <div class="container">
 	<h1>About</h1>
-	<p>Under development</p>
+	<p>Intellimail.xyz is a website currently under development. Intellimail helps people write emails faster and with less effort. If you would like to help out, please contact us.</p>
 </div>
 
 </body>
