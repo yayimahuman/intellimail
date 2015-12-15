@@ -13,14 +13,11 @@
   background: -moz-linear-gradient(#003366, #00509F); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#003366, #00509F); /* Standard syntax */
   background-size: cover;
-  padding:50px 20px;
+  padding: 80px 20px;
   position: relative;
 }
 body{
   background:#F0F0F0;
-}
-button.navbar-toggle, span.icon-bar {
-  color:white;
 }
 button,input[type=submit]{
   font-size: 1.25em;
