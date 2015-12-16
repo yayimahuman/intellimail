@@ -44,7 +44,7 @@ center {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-glyphicon glyphicon-envelope {
+.glyphicon .glyphicon-envelope {
   background:white;
 }
 input[type=range] {
