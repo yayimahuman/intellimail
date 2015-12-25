@@ -30,8 +30,8 @@
 
 <div class="jumbotron">
 	<div class="container">
-		<h1>IntelliMail - Under Development</h1>
-		<p>The smarter way to write an email</p>
+		<h1 style="color:white">IntelliMail - Under Development</h1>
+		<p style="color:white">The smarter way to write an email</p>
 	</div>
 </div>
 
