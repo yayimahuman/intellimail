@@ -32,6 +32,7 @@
 	<div class="container">
 		<h1 style="color:white">IntelliMail - Under Development</h1>
 		<p style="color:white">The smarter way to write an email</p>
+<a href="#content">><span style="color:white" class="glyphicon glyphicon-chevron-down"></span></a>
 	</div>
 </div>
 
