@@ -149,9 +149,11 @@ input[type=text]:focus {
 }
 .jumbotron .container > h1  {
   font-size: 40px;
+  text-align: center;
 }
 .jumbotron .container > p {
   font-size: 18px;
+  text-align: center;
 }
 @media(min-width:768px) {
   .jumbotron {
@@ -163,11 +165,9 @@ input[type=text]:focus {
   }
   .jumbotron .container > h1 {
     font-size: 100px;
-    text-align: center;
   }
   .jumbotron .container > p {
     font-size: 26px;
-    text-align: center;
   }
 }
 /*for navigation bar*/
@@ -199,6 +199,6 @@ input[type=text]:focus {
 .navbar .navbar-collapse {
   text-align: center;
 }
-p{
+p {
   font-size:1.25em;
 }
