@@ -176,6 +176,9 @@ input[type=text]:focus {
   margin:0px;
   border:none;
 }
+.navbar-default .navbar-toggle span.icon-bar{
+  background:white;
+}
 .navbar-default .navbar-nav > li > a {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
