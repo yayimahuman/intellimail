@@ -36,6 +36,8 @@
 	</div>
 </div>
 
+<section id="content"></section>
+
 <div class="container">
 	<h3>Popular Templates:</h3>
 </div>
