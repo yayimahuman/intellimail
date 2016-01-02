@@ -13,8 +13,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-	<script src="./javascript/mailScript.js" type="text/javascript"></script>
-	<link rel="stylesheet" type="text/css" href="./css/mailStyle.css">
+	<script src="javascript/mailScript.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/mailStyle.css" type="text/css">
 	<script>
 		$( document ).ready(function() {
 			checkFormal();
@@ -32,7 +32,7 @@
 	<div class="container">
 		<h1 style="color:white">IntelliMail - Under Development</h1>
 		<p style="color:white">The smarter way to write an email</p>
-<a href="#content">><span style="color:white" class="glyphicon glyphicon-chevron-down"></span></a>
+		<p><a class="page-scroll" href="#content"><span class="glyphicon glyphicon-chevron-down" style="color:white"></span></a></p>
 	</div>
 </div>
 
@@ -41,82 +41,84 @@
 </div>
 
 <div class="container">
-<h4>Missing Class</h4>
-<p>How formal do you want your email to be?
-<input type="range" id="myRange" min="0" max="2" value="1" onchange="checkFormal()">
-
-<h5 id="para"></h5>
+	
+	<h4>Missing Class</h4>
+	<p>How formal do you want your email to be?
+	<input type="range" id="myRange" min="0" max="2" value="1" onchange="checkFormal()">
+	<h5 id="para"></h5>
 	<br>
 	<br>
 
 	<div id="tone0" style="display:none">
 		<form role="form" action="written_email.php" method="get">
-		<input type="hidden" name="tone" value="0">
-		<p>Hi 
-		<input type="text" name="recipient" placeholder="Mr. Bitidez">,
-		<br>
-		<br>
-		<p>I hope you're having a good <span class="day"></span>! I just wanted to let you know that I will be away on 
-		<input type="text" name="day" placeholder="Tuesday" style="width:90px"> since I 
-		<input type="text" name="reason" placeholder="have a volleyball game">. I will 
-		<input type="text" name="actions" placeholder="check Google Classroom and" style="width:225px"> ask a friend for the homework and catch up on any work I miss. If you would like me to drop by sometime to pick up any handouts I'll need, please let me know.
-		<br>
-		<br>
-		Thanks,
-		<br>
-		<input type="text" name="signature" placeholder="Harry">
-		<br>
-		<br>
-		<input type="submit" value="Finish">
+			<input type="hidden" name="tone" value="0">
+			<p>Hi 
+			<input type="text" name="recipient" placeholder="Mr. Bitidez">,
+			<br>
+			<br>
+			<p>I hope you're having a good <span class="day"></span>! I just wanted to let you know that I will be away on 
+			<input type="text" name="day" placeholder="Tuesday" style="width:90px"> since I 
+			<input type="text" name="reason" placeholder="have a volleyball game">. I will 
+			<input type="text" name="actions" placeholder="check Google Classroom and" style="width:225px"> ask a friend for the homework and catch up on any work I miss. If you would like me to drop by sometime to pick up any handouts I'll need, please let me know.
+			<br>
+			<br>
+			Thanks,
+			<br>
+			<input type="text" name="signature" placeholder="Harry">
+			<br>
+			<br>
+			<input type="submit" value="Finish">
 		</form>
 	</div>
 
 	<div id="tone1" style="display:none">
 		<form role="form" action="written_email.php" method="get">
-		<input type="hidden" name="tone" value="1">
-		<p>Dear 
-		<input type="text" name="recipient" placeholder="Ms. Williams">,
-		<br>
-		<br>
-		<p>I hope you are having a nice <span class="day"></span>! I just wanted to let you know that I will not be in class on 
-		<input type="text" name="day" placeholder="Tuesday" style="width:90px"> since I 
-		<input type="text" name="reason" placeholder="will be at a debating tournament" style="width:240px">. I will 
-		<input type="text"  name="actions" placeholder="check Google Classroom and" style="width:225px"> ask a friend for the homework and catch up on any work I miss. If you would like me to drop by sometime to pick up any handouts, please let me know.
-		<br>
-		<br>
-		Thanks,
-		<br>
-		<input type="text" name="signature" placeholder="Harry">
-		<br>
-		<br>
-		<input type="submit" value="Finish">
+			<input type="hidden" name="tone" value="1">
+			<p>Dear 
+			<input type="text" name="recipient" placeholder="Ms. Williams">,
+			<br>
+			<br>
+			<p>I hope you are having a nice <span class="day"></span>! I just wanted to let you know that I will not be in class on 
+			<input type="text" name="day" placeholder="Tuesday" style="width:90px"> since I 
+			<input type="text" name="reason" placeholder="will be at a debating tournament" style="width:240px">. I will 
+			<input type="text"  name="actions" placeholder="check Google Classroom and" style="width:225px"> ask a friend for the homework and catch up on any work I miss. If you would like me to drop by sometime to pick up any handouts, please let me know.
+			<br>
+			<br>
+			Thanks,
+			<br>
+			<input type="text" name="signature" placeholder="Harry">
+			<br>
+			<br>
+			<input type="submit" value="Finish">
 		</form>
 	</div>
 
 	<div id="tone2" style="display:none">
 		<form role="form" action="written_email.php" method="get">
-		<input type="hidden" name="tone" value="2">
-		<p>Dear 
-		<input type="text" name="recipient" placeholder="Mr. Allan Poe">,
-		<br>
-		<br>
-		<p>I hope your <span class="day"></span> is going well! I just wanted to inform you that, unfortunately, I will be unable to attend class on 
-		<input type="text" name="day" placeholder="Tuesday" style="width:90px"> because of 
-		<input type="text" name="reason" placeholder="an urgent family issue" style="width:180px">. I will 
-		<input type="text" name="actions" placeholder="check Google Classroom and" style="width:225px"> ask a classmate for the homework and complete any work I miss. If you would like me to pick up any handouts, please let me know.
-		<br>
-		<br>
-		Thanks,
-		<br>
-		<input type="text" name="signature" placeholder="Harry">
-		<br>
-		<br>
-		<input type="submit" value="Finish">
+			<input type="hidden" name="tone" value="2">
+			<p>Dear 
+			<input type="text" name="recipient" placeholder="Mr. Allan Poe">,
+			<br>
+			<br>
+			<p>I hope your <span class="day"></span> is going well! I just wanted to inform you that, unfortunately, I will be unable to attend class on 
+			<input type="text" name="day" placeholder="Tuesday" style="width:90px"> because of 
+			<input type="text" name="reason" placeholder="an urgent family issue" style="width:180px">. I will 
+			<input type="text" name="actions" placeholder="check Google Classroom and" style="width:225px"> ask a classmate for the homework and complete any work I miss. If you would like me to pick up any handouts, please let me know.
+			<br>
+			<br>
+			Thanks,
+			<br>
+			<input type="text" name="signature" placeholder="Harry">
+			<br>
+			<br>
+			<input type="submit" value="Finish">
 		</form>
 	</div>
-
+	
 </div>
 
+<script src="javascript/jquery.easing.min.js"></script>
+<script src="javascript/scrolling-nav.js"></script>
 
 </body>
 </html>
